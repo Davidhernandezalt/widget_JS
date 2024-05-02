@@ -1,3 +1,9 @@
+// Utiliza un evento de carga para asegurarte de que el DOM esté completamente cargado antes de iniciar el widget
+document.addEventListener("DOMContentLoaded", function() {
+    // Llama a la función para inicializar el widget
+    initWidget("widget-container");
+});
+
 // Definición de la función para inicializar el widget
 function initWidget(containerId) {
     // Obtén el contenedor donde se insertará el widget
