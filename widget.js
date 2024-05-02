@@ -1,18 +1,23 @@
-// Utiliza un evento de carga para asegurarte de que el DOM esté completamente cargado antes de iniciar el widget
-document.addEventListener("DOMContentLoaded", function() {
-    // Llama a la función para inicializar el widget
-    initWidget("widget-container");
-});
+// Utilizamos una función autoejecutable para que el código se ejecute automáticamente
+(function() {
+    // Definimos la función para inicializar el widget
+    function initWidget() {
+        // Creamos el contenedor del widget si no existe
+        var container = document.getElementById("widget-container");
+        if (!container) {
+            container = document.createElement("div");
+            container.id = "widget-container";
+            document.body.appendChild(container);
+        }
 
-// Definición de la función para inicializar el widget
-function initWidget(containerId) {
-    // Obtén el contenedor donde se insertará el widget
-    var container = document.getElementById(containerId);
+        // Crea el contenido del widget
+        var widgetContent = document.createElement("div");
+        widgetContent.innerHTML = "<h2>Este es mi widget</h2><button onclick='alert(\"Hola desde el widget!\")'>Haz clic</button>";
 
-    // Crea el contenido del widget
-    var widgetContent = document.createElement("div");
-    widgetContent.innerHTML = "<h2>Este es mi widget</h2><button onclick='alert(\"Hola desde el widget!\")'>Haz clic</button>";
+        // Agrega el contenido del widget al contenedor
+        container.appendChild(widgetContent);
+    }
 
-    // Agrega el contenido del widget al contenedor
-    container.appendChild(widgetContent);
-}
+    // Llamamos a la función para inicializar el widget
+    initWidget();
+})();
