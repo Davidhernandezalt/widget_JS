@@ -1,31 +1,35 @@
 // Utilizamos una función autoejecutable para que el código se ejecute automáticamente
 (function() {
-    // Definimos la función para inicializar el widget
-    function initWhatsAppWidget() {
-        // Crea el contenedor del widget de WhatsApp
-        var whatsappWidget = document.createElement("div");
-        whatsappWidget.id = "whatsapp-widget";
+    // Creamos el contenedor del widget de WhatsApp
+    var whatsappWidget = document.createElement("div");
+    whatsappWidget.id = "whatsapp-widget";
+    document.body.appendChild(whatsappWidget);
 
-        // Crea el enlace para WhatsApp
-        var whatsappLink = document.createElement("a");
-        whatsappLink.href = "https://wa.me/NUMERO_DE_TELEFONO";
-        whatsappLink.target = "_blank";
+    // Creamos el enlace de WhatsApp
+    var whatsappLink = document.createElement("a");
+    whatsappLink.href = "https://wa.me/XXXXXXXXXX";
+    whatsappLink.target = "_blank";
 
-        // Crea el icono de WhatsApp
-        var whatsappIcon = document.createElement("img");
-        whatsappIcon.src = "whatsapp-icon.png";
-        whatsappIcon.alt = "WhatsApp";
+    // Creamos la imagen del icono de WhatsApp
+    var whatsappIcon = document.createElement("img");
+    whatsappIcon.src = "ruta-a-tu-icono-de-whatsapp.png";
+    whatsappIcon.alt = "WhatsApp";
 
-        // Agrega el icono al enlace
-        whatsappLink.appendChild(whatsappIcon);
+    // Añadimos la imagen al enlace de WhatsApp
+    whatsappLink.appendChild(whatsappIcon);
 
-        // Agrega el enlace al contenedor del widget
-        whatsappWidget.appendChild(whatsappLink);
+    // Añadimos el enlace de WhatsApp al contenedor del widget
+    whatsappWidget.appendChild(whatsappLink);
 
-        // Agrega el contenedor del widget al cuerpo del documento
-        document.body.appendChild(whatsappWidget);
-    }
+    // Estilizamos el widget de WhatsApp
+    var whatsappWidgetStyle = whatsappWidget.style;
+    whatsappWidgetStyle.position = "fixed";
+    whatsappWidgetStyle.bottom = "20px";
+    whatsappWidgetStyle.right = "20px";
+    whatsappWidgetStyle.zIndex = "1000";
 
-    // Llamamos a la función para inicializar el widget de WhatsApp
-    initWhatsAppWidget();
+    // Estilizamos la imagen del icono de WhatsApp
+    var whatsappIconStyle = whatsappIcon.style;
+    whatsappIconStyle.width = "60px";
+    whatsappIconStyle.height = "auto";
 })();
