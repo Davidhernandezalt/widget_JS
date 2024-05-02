@@ -12,7 +12,7 @@
 
         // Crea el contenido del widget
         var widgetContent = document.createElement("div");
-        widgetContent.innerHTML = "<h2>Este es mi widget</h2><button onclick='alert(\"Hola desde el widget!\")'>Haz clic</button>";
+        widgetContent.innerHTML = "<button onclick='alert(\"Hola desde el widget!\")'>Haz clic</button>";
 
         // Agrega el contenido del widget al contenedor
         container.appendChild(widgetContent);
