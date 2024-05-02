@@ -24,7 +24,7 @@
     // Creamos el botón flotante sticky
     var floatingButton = document.createElement("button");
     floatingButton.className = "floating-button";
-    floatingButton.textContent = "+";
+    floatingButton.textContent = "pepe";
     floatingButton.onclick = function() {
         alert("Hola desde el botón flotante!");
     };
